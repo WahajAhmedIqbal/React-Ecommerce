@@ -5,14 +5,14 @@ import { deleteitem } from "../../../store/store";
 import SubTotal from "./subtotal";
 
 const CheckoutProduct = ({ id, image, title, price }) => {
-  const dispatch = useDispatch();
-  const basketprice = useSelector((state) => state.cart.basket);
+  // const dispatch = useDispatch();
+  // const basketprice = useSelector((state) => state.cart.basket);
 
   // console.log(basketprice);
 
-  const deletefun = (id) => {
-    dispatch(deleteitem(id));
-  };
+  // const deletefun = (id) => {
+  //   dispatch(deleteitem(id));
+  // };
 
   return (
     <div>
@@ -61,7 +61,7 @@ const CheckoutProduct = ({ id, image, title, price }) => {
             </td>
             <td></td>
             <td>
-              <Button onClick={() => deletefun(id)}>Remove form basket</Button>
+              {/* <Button onClick={() => deletefun(id)}>Remove form basket</Button> */}
             </td>
           </tr>
         </tbody>

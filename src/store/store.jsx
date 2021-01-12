@@ -1,19 +1,19 @@
-import { createStore } from "redux";
-import { composeWithDevTools } from "redux-devtools-extension";
-import rootReducer from "./reducer";
+// import { createStore } from "redux";
+// import { composeWithDevTools } from "redux-devtools-extension";
+// import rootReducer from "./reducer";
 
-export const additem = (items) => {
-  return {
-    type: "ADD_TO_BASKET",
-    payload: items,
-  };
-};
+// export const additem = (items) => {
+//   return {
+//     type: "ADD_TO_BASKET",
+//     payload: items,
+//   };
+// };
 
-export const deleteitem = (id) => ({
-  type: "DELETE_ITEM",
-  payload: id,
-});
+// export const deleteitem = (id) => ({
+//   type: "DELETE_ITEM",
+//   payload: id,
+// });
 
-const store = createStore(rootReducer, composeWithDevTools());
+// const store = createStore(rootReducer, composeWithDevTools());
 
-export default store;
+// export default store;

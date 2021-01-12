@@ -20,14 +20,14 @@ const Cards = () => {
       }}
     >
       <div className="col-sm" style={{ marginLeft: 150, marginBottom: 21 }}>
-        <CardItem id="0011" img={image1} title="Fish Burger" price="700 Rs" />
+        <CardItem />
+      </div>
+      {/* <div className="col-sm" style={{ marginLeft: 150, marginBottom: 21 }}>
+        <CardItem />
       </div>
       <div className="col-sm" style={{ marginLeft: 150, marginBottom: 21 }}>
-        <CardItem id="0012" img={image2} title="Crown Burger" price="950 RS" />
-      </div>
-      <div className="col-sm" style={{ marginLeft: 150, marginBottom: 21 }}>
-        <CardItem id="0013" img={image3} title="Fry Prowns" price="1500 Rs" />
-      </div>
+        <CardItem />
+      </div> */}
       {/* <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src="holder.js/100px180" />
         <Card.Body>

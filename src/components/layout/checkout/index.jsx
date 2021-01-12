@@ -4,13 +4,13 @@ import "./checkout.css";
 import CheckoutProduct from "./CheckoutProduct";
 
 const Checkout = () => {
-  const basket = useSelector((state) => state.cart.basket);
+  // const basket = useSelector((state) => state.cart.basket);
 
   return (
     <div>
       <h1>checkout page</h1>
 
-      {basket.length == 0 ? (
+      {/* {basket.length == 0 ? (
         <div>
           <h1>you'r basket is empty</h1>
           <p>
@@ -29,7 +29,7 @@ const Checkout = () => {
             />
           ))}
         </div>
-      )}
+      )} */}
     </div>
   );
 };

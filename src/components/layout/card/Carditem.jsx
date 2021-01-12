@@ -1,37 +1,40 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
-import { useDispatch } from "react-redux";
-import { additem } from "../../../store/store";
+import { useDispatch, useSelector } from "react-redux";
+// import { additem } from "../../../store/store";
+import { addToCart } from "../../../redux/Shopping/shopping-action";
 
-const CardItem = ({ id, img, title, price }) => {
+const CardItem = () => {
   const dispatch = useDispatch();
 
-  const addToCartFun = () => {
-    const newitem = {
-      id,
-      img,
-      title,
-      price,
-    };
-    dispatch(additem(newitem));
+  const productData = useSelector((state) => state.shop.products);
+
+  const addToCartFun = (id) => {
+    dispatch(addToCart(id));
   };
 
   return (
     <div>
-      <Card className="col-sm" style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={img} />
-        <Card.Body>
-          <Card.Title>{title} </Card.Title>
-          <Card.Title>{price}</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-          <Button variant="primary" onClick={addToCartFun}>
-            Add to Cart
-          </Button>
-        </Card.Body>
-      </Card>
+      {productData.map((item) => {
+        return (
+          <div>
+            <Card className="col-sm" style={{ width: "18rem" }}>
+              <Card.Img variant="top" src={item.image} />
+              <Card.Body>
+                <Card.Title>{item.title} </Card.Title>
+                <Card.Title>{item.price}</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+                <Button variant="primary" onClick={() => addToCartFun(item.id)}>
+                  Add to Cart
+                </Button>
+              </Card.Body>
+            </Card>
+          </div>
+        );
+      })}
     </div>
   );
 };
