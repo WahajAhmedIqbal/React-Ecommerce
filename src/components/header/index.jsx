@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./header.css";
 import { Button, Form, FormControl, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -8,6 +8,17 @@ import { useSelector } from "react-redux";
 import CheckOut from "../../components/layout/checkout";
 
 const Header = () => {
+  const cart = useSelector((state) => state.shop.cart);
+  const [cartCount, setCartCount] = useState(0);
+
+  useEffect(() => {
+    let count = 0;
+    cart.forEach((item) => {
+      count += item.qty;
+    });
+    setCartCount(count);
+  }, [cartCount, cart]);
+
   // const basket = useSelector((state) => state.cart.basket);
   // console.log(basket);
   return (
@@ -42,7 +53,7 @@ const Header = () => {
               <div className="checkout-box">
                 <Link to="/home/checkout">
                   <ShoppingCartIcon /> Go To Your Cart
-                  {/* <span className="cart-counter">{basket.length}</span> */}
+                  <span className="cart-counter">{cartCount}</span>
                 </Link>
               </div>
             </Form>

@@ -54,14 +54,14 @@ const shopReducer = (state = initialState, action) => {
     case actionType.REMOVE_FROM_CART:
       return {
         ...state,
-        cart: state.cart.filter((item) => item.id != action.payload.id),
+        cart: state.cart.filter((item) => item.id !== action.payload.id),
       };
     case actionType.ADJUST_QTY:
       return {
         ...state,
         cart: state.cart.map((item) =>
           item.id === action.payload.id
-            ? { ...item, qty: action.payload.qty }
+            ? { ...item, qty: +action.payload.qty }
             : item
         ),
       };
