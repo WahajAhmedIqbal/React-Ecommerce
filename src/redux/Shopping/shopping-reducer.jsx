@@ -23,12 +23,6 @@ const initialState = {
       price: 1500,
       image: image3,
     },
-    {
-      id: 3,
-      title: "Fish Fry Burger",
-      price: 1500,
-      image: image3,
-    },
   ],
   cart: [],
   currentItem: null,

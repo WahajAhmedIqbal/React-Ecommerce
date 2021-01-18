@@ -18,7 +18,9 @@ const CheckoutProduct = ({ id, image, title, price, qty }) => {
 
   const changeHandler = (e) => {
     setInputChange(e.target.value);
+    console.log(setInputChange);
     dispatch(adjustQty(id, e.target.value));
+    console.log(id, qty);
   };
 
   const deletefun = (id) => {
@@ -73,6 +75,7 @@ const CheckoutProduct = ({ id, image, title, price, qty }) => {
             <td>
               <input
                 min="1"
+                max="20"
                 type="number"
                 onChange={changeHandler}
                 value={inputChange}

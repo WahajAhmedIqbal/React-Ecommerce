@@ -17,8 +17,14 @@ const CardItem = () => {
     <div>
       {productData.map((item) => {
         return (
-          <div>
-            <Card className="col-sm" style={{ width: "18rem" }}>
+          <div
+            style={{
+              width: "18rem",
+              display: "flex",
+              justifyContent: "space-around",
+            }}
+          >
+            <Card>
               <Card.Img variant="top" src={item.image} />
               <Card.Body>
                 <Card.Title>{item.title} </Card.Title>

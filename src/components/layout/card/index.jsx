@@ -9,19 +9,19 @@ import CardItem from "./Carditem";
 const Cards = () => {
   return (
     <div
-      className=" row main-card"
+      // className=" row main-card"
       style={{
         display: "flex",
-        backgroundColor: "azure",
-        justifyContent: "space-evenly",
-        paddingTop: 20,
-        paddingBottom: 20,
-        width: "100%",
+        justifyContent: "space-around",
       }}
     >
-      <div className="col-sm" style={{ marginLeft: 150, marginBottom: 21 }}>
-        <CardItem />
-      </div>
+      {/* <div style={{ marginLeft: 150, marginBottom: 21 }}> */}
+
+      {/* <div className="row"> */}
+
+      <CardItem />
+
+      {/* </div> */}
       {/* <div className="col-sm" style={{ marginLeft: 150, marginBottom: 21 }}>
         <CardItem />
       </div>
