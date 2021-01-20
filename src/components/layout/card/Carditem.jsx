@@ -19,14 +19,16 @@ const CardItem = () => {
       style={{
         display: "flex",
         justifyContent: "space-around",
+        width: "100%",
       }}
     >
       {productData.map((item) => {
         return (
           <div
-            className="col-4"
+            className="col-3 col-xs-8"
             style={{
               width: "18rem",
+              margin: 10,
             }}
           >
             <Card>

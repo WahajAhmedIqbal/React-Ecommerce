@@ -9,11 +9,11 @@ import CardItem from "./Carditem";
 const Cards = () => {
   return (
     <div
-
-    // style={{
-    //   display: "flex",
-    //   justifyContent: "space-around",
-    // }}
+      style={{
+        display: "flex",
+        justifyContent: "space-around",
+        width: "99%",
+      }}
     >
       {/* <div style={{ marginLeft: 150, marginBottom: 21 }}> */}
 
